@@ -72,6 +72,19 @@
     requestAnimationFrame(frame);
   }
 
+  document.querySelectorAll("[data-count-standalone]").forEach(function (el) {
+    var target = parseFloat(el.getAttribute("data-count-standalone"));
+    function run() { count(el, target); }
+    if (!("IntersectionObserver" in window)) { run(); return; }
+    var one = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      el.setAttribute("data-suffix", "%");
+      run();
+      one.disconnect();
+    }, { threshold: 0.4 });
+    one.observe(el);
+  });
+
   var form = document.querySelector("form[data-draft]");
   if (form) {
     form.addEventListener("submit", function (event) {
