@@ -85,6 +85,161 @@
     one.observe(el);
   });
 
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var arrivals2024 = [420037, 455277, 469227, 503194, 544601, 520898, 625665, 616641, 593909, 559911, 472900, 551100];
+  var arrivals2025 = [529897, 450697, 470851, 591221, 602213, 637868, 697107, 682866, 635149, 594853, 483364, 572668];
+  var yoy = arrivals2025.map(function (value, i) {
+    return ((value - arrivals2024[i]) / arrivals2024[i]) * 100;
+  });
+
+  document.querySelectorAll(".linechart").forEach(function (el) {
+    var kind = el.getAttribute("data-chart");
+    if (kind === "arrivals") {
+      drawChart(el, [
+        { name: "2024", color: "rgba(228,235,230,0.55)", values: arrivals2024 },
+        { name: "2025", color: "#8fb0c8", values: arrivals2025, fill: true }
+      ], { format: "visits" });
+    } else if (kind === "yoy") {
+      drawChart(el, [
+        { name: "2025 vs 2024", color: "#8fb0c8", values: yoy, fill: true }
+      ], { format: "percent", zero: true });
+    }
+  });
+
+  function niceStep(rough) {
+    var pow = Math.pow(10, Math.floor(Math.log10(Math.abs(rough) || 1)));
+    var n = rough / pow;
+    var step = n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10;
+    return step * pow;
+  }
+
+  function niceTicks(min, max, count) {
+    var step = niceStep((max - min) / count);
+    var start = Math.ceil(min / step) * step;
+    var ticks = [];
+    for (var v = start; v <= max + step * 0.01; v += step) ticks.push(v);
+    return ticks;
+  }
+
+  function drawChart(el, series, opts) {
+    var w = 640;
+    var h = 280;
+    var pad = { l: 46, r: 8, t: 18, b: 32 };
+    var all = [];
+    series.forEach(function (s) { all = all.concat(s.values); });
+    var min = Math.min.apply(null, all);
+    var max = Math.max.apply(null, all);
+    if (opts.zero) min = Math.min(0, min);
+    var span = (max - min) || 1;
+    min -= span * 0.08;
+    max += span * 0.14;
+    if (opts.zero && min > 0) min = 0;
+    span = max - min;
+    function x(i) { return pad.l + (i / (months.length - 1)) * (w - pad.l - pad.r); }
+    function y(v) { return pad.t + (1 - (v - min) / span) * (h - pad.t - pad.b); }
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 " + w + " " + h);
+    var ticks = niceTicks(min, max, opts.format === "percent" ? 5 : 4);
+    ticks.forEach(function (value) {
+      var yy = y(value);
+      var line = document.createElementNS(svg.namespaceURI, "line");
+      line.setAttribute("x1", pad.l);
+      line.setAttribute("x2", w - pad.r);
+      line.setAttribute("y1", yy);
+      line.setAttribute("y2", yy);
+      line.setAttribute("class", "grid");
+      svg.appendChild(line);
+      var label = document.createElementNS(svg.namespaceURI, "text");
+      label.setAttribute("x", 0);
+      label.setAttribute("y", yy + 4);
+      label.setAttribute("class", "axis");
+      label.textContent = opts.format === "percent" ? Math.round(value) + "%" : Math.round(value / 1000) + "k";
+      svg.appendChild(label);
+    });
+    if (opts.zero && min < 0 && max > 0) {
+      var zero = document.createElementNS(svg.namespaceURI, "line");
+      zero.setAttribute("x1", pad.l);
+      zero.setAttribute("x2", w - pad.r);
+      zero.setAttribute("y1", y(0));
+      zero.setAttribute("y2", y(0));
+      zero.setAttribute("class", "zero");
+      svg.appendChild(zero);
+    }
+    months.forEach(function (month, i) {
+      if (i % 2) return;
+      var label = document.createElementNS(svg.namespaceURI, "text");
+      label.setAttribute("x", x(i));
+      label.setAttribute("y", h - 8);
+      label.setAttribute("text-anchor", "middle");
+      label.setAttribute("class", "axis");
+      label.textContent = month;
+      svg.appendChild(label);
+    });
+    series.forEach(function (s) {
+      var d = s.values.map(function (v, i) { return (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1); }).join(" ");
+      if (s.fill) {
+        var area = document.createElementNS(svg.namespaceURI, "path");
+        var base = y(opts.zero ? 0 : min);
+        area.setAttribute("d", d + " L" + x(s.values.length - 1).toFixed(1) + " " + base.toFixed(1) + " L" + x(0).toFixed(1) + " " + base.toFixed(1) + " Z");
+        area.setAttribute("fill", "rgba(143,176,200,0.16)");
+        svg.appendChild(area);
+      }
+      var path = document.createElementNS(svg.namespaceURI, "path");
+      path.setAttribute("d", d);
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", s.color);
+      path.setAttribute("stroke-width", "2.5");
+      path.setAttribute("stroke-linejoin", "round");
+      path.setAttribute("stroke-linecap", "round");
+      svg.appendChild(path);
+      if (!reduce) {
+        var length = path.getTotalLength();
+        path.style.strokeDasharray = String(length);
+        path.style.strokeDashoffset = String(length);
+        path.style.transition = "stroke-dashoffset 1.2s cubic-bezier(0.22,1,0.36,1)";
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(function (entries) {
+            if (!entries[0].isIntersecting) return;
+            path.style.strokeDashoffset = "0";
+            io.disconnect();
+          }, { threshold: 0.4 });
+          io.observe(el);
+        } else {
+          path.style.strokeDashoffset = "0";
+        }
+      }
+    });
+    el.appendChild(svg);
+    var legend = document.createElement("div");
+    legend.className = "legend";
+    series.forEach(function (s) {
+      var item = document.createElement("span");
+      item.innerHTML = '<i class="swatch" style="background:' + s.color + '"></i>' + s.name;
+      legend.appendChild(item);
+    });
+    el.appendChild(legend);
+    var tip = document.createElement("div");
+    tip.className = "chart-tip";
+    tip.hidden = true;
+    el.appendChild(tip);
+    svg.addEventListener("mousemove", function (event) {
+      var rect = svg.getBoundingClientRect();
+      var px = ((event.clientX - rect.left) / rect.width) * w;
+      var i = Math.round(((px - pad.l) / (w - pad.l - pad.r)) * (months.length - 1));
+      i = Math.max(0, Math.min(months.length - 1, i));
+      var lines = series.map(function (s) {
+        var v = s.values[i];
+        var text = opts.format === "percent" ? (v > 0 ? "+" : "") + v.toFixed(1) + "%" : Math.round(v).toLocaleString("en-AU");
+        return s.name + " " + text;
+      });
+      tip.hidden = false;
+      tip.textContent = months[i] + " · " + lines.join(" · ");
+      tip.style.left = ((x(i) / w) * 100) + "%";
+      tip.style.top = "18px";
+    });
+    svg.addEventListener("mouseleave", function () { tip.hidden = true; });
+  }
+
   var form = document.querySelector("form[data-draft]");
   if (form) {
     form.addEventListener("submit", function (event) {
