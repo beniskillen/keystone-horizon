@@ -86,13 +86,14 @@ em {
   transition: transform 0.45s var(--ease), opacity 0.3s ease;
 }
 .mast.is-hidden { transform: translateY(-130%); opacity: 0; }
-.pill {
+nav.pill {
   pointer-events: auto;
   position: relative;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 4px;
-  padding: 5px 5px 5px 8px;
+  padding: 5px 5px 5px 12px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(12, 20, 16, 0.58);
@@ -106,16 +107,14 @@ em {
   border-color: rgba(255, 255, 255, 0.14);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
-.brand { display: flex; align-items: center; margin-right: 6px; }
+.brand { display: inline-flex; flex: 0 0 auto; align-items: center; margin-right: 8px; }
 .brand img {
-  width: 34px;
-  height: 34px;
-  object-fit: cover;
-  border-radius: 9px;
-  background: #141c25;
+  display: block;
+  width: auto;
+  height: 30px;
   transition: transform 0.4s var(--ease);
 }
-.brand:hover img { transform: scale(1.06) rotate(-2deg); }
+.brand:hover img { transform: scale(1.05); }
 .pill-links {
   display: flex;
   align-items: center;
@@ -1570,10 +1569,10 @@ footer.site-foot { padding-top: 48px; }
 @media (max-width: 1100px) {
   :root { --mast-h: 64px; }
   .mast { padding: 10px 12px 0; }
-  .pill {
+  nav.pill {
     width: 100%;
     max-width: 640px;
-    padding: 5px 5px 5px 8px;
+    padding: 5px 5px 5px 12px;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     background: rgba(12, 20, 16, 0.9);
