@@ -322,9 +322,16 @@
     return link;
   }
 
+  var coarse = window.matchMedia("(pointer: coarse)").matches;
+  if (coarse) legend.textContent = "Tap a place once to read its profile, and again to open the note. Dashed line: the toll that is still a tender. Nusa Penida is drawn, and it is not a KHC place.";
   function bind(el, id) {
     el.addEventListener("mouseenter", function () { activate(id); });
     el.addEventListener("focus", function () { activate(id); });
+    el.addEventListener("click", function (event) {
+      if (!coarse || current === id) return;
+      event.preventDefault();
+      activate(id);
+    });
   }
 
   root.querySelectorAll(".atlas-row").forEach(function (row) {
@@ -368,7 +375,22 @@
     if (place) show(place);
   }
 
+  var swapTimer = null;
+  var shown = null;
   function show(place) {
+    if (shown === place) return;
+    shown = place;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) { paint(place); return; }
+    clearTimeout(swapTimer);
+    panel.classList.add("is-swapping");
+    swapTimer = setTimeout(function () {
+      paint(place);
+      panel.classList.remove("is-swapping");
+    }, 180);
+  }
+
+  function paint(place) {
     panel.querySelector("[data-kicker]").textContent = place.group;
     panel.querySelector("[data-title]").textContent = place.name;
     var stat = panel.querySelector("[data-stat]");

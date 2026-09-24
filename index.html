@@ -4,15 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Keystone Horizon Collective</title>
+  <meta name="description" content="One operator from the land file to the exit. KHC sources, Keystone Kayra builds, and the same name stays for management." />
+  <meta name="theme-color" content="#0c1410" />
+  <meta property="og:title" content="Keystone Horizon Collective" />
+  <meta property="og:description" content="One operator from the land file to the exit. KHC sources, Keystone Kayra builds, and the same name stays for management." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="assets/khc-lion-crest.png" type="image/png" />
+  <link rel="preload" href="assets/fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/instrument-italic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/video/hero-poster.jpg" as="image" />
   <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="mast">
     <nav class="pill" aria-label="Primary">
       <a class="brand" href="index.html" aria-label="Keystone Horizon Collective">
-        <img src="assets/khc-lion-crest.png" alt="" />
+        <img src="assets/khc-lion-crest.png" alt="" width="34" height="34" />
       </a>
-      <button class="menu" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span></button>
       <div class="pill-links">
         <div class="drop">
           <button type="button" aria-expanded="false" aria-haspopup="true">About <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 4.2 6 8l3.8-3.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -70,17 +80,23 @@
           </div>
         </div>
         <a class="pill-link" href="walk.html">Contact</a>
-        <a class="pill-cta" href="walk.html">Book a call</a>
       </div>
+      <a class="pill-cta" href="walk.html">Book a call</a>
+      <button class="menu" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span></button>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="main">
     <div class="hero-frame">
-      <video autoplay muted loop playsinline>
+      <video autoplay muted loop playsinline poster="assets/video/hero-poster.jpg" aria-hidden="true">
         <source src="assets/video/hero.mp4" type="video/mp4" />
       </video>
       <div class="shade"></div>
+      <button class="hero-ctl" type="button" aria-pressed="false" aria-label="Pause background video">
+        <svg class="i-pause" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5h2.8v9H2zM7.2 1.5H10v9H7.2z"/></svg>
+        <svg class="i-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l8-4.5-8-4.5z"/></svg>
+      </button>
+      <p class="hero-cue" aria-hidden="true">Scroll<i></i></p>
       <div class="copy">
         <p class="kicker">Stacked Bali investing</p>
         <h1><em>Own</em> the stack.</h1>
@@ -97,7 +113,7 @@
     </div>
   </div>
 
-  <section class="trust" aria-label="Trust">
+  <section class="trust" id="trust" data-chapter="Trust" aria-label="Trust">
     <div class="trust-head">
       <div>
         <p class="kicker">Trusted by</p>
@@ -124,7 +140,7 @@
     </ul>
   </section>
 
-  <section class="section" id="map">
+  <section class="section" id="map" data-chapter="The island">
     <div class="wrap">
       <span class="chip">Research file. Not cleared.</span> 
       <p class="kicker">The island</p>
@@ -134,22 +150,22 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="thesis" data-chapter="The thesis">
     <div class="wrap">
       <p class="kicker">Why the page starts here</p>
       <h2>A picture cannot hold a <em>title.</em></h2>
       <p class="lede">The render is the easy part. These four are what a buyer actually needs the operator to stand behind, and each one fails in a different place if it is split across vendors.</p>
       <div class="grid-4" style="margin-top:28px">
         <article class="stat"><span class="idx">01 Operator</span> <strong>1</strong><p>Title, permit, wall, and management fail at the seams. One name has to hold the sequence, or the investor inherits the gaps.</p></article>
-        <article class="stat"><figure class="shot shot-deed"><img src="assets/photos/agraria.jpg" alt="Title page of Law 5 of 1960, the Basic Agrarian Law" /></figure><span class="idx">02 Title</span> <strong>PT PMA</strong><p>Freehold is not a foreign right under the Basic Agrarian Law. A nominee certificate is the nightmare dressed up as ownership.</p></article>
-        <article class="stat"><figure class="shot shot-stud"><img src="assets/photos/steel-stud.jpg" alt="Cross-section of a cold-formed steel stud, the wall specification" /></figure><span class="idx">03 Build</span> <strong>Kayra</strong><p>The company that draws the PBG is the company that has to live with the SLF. A builder hired after the sale can walk away from both.</p></article>
+        <article class="stat"><figure class="shot shot-deed"><img src="assets/photos/agraria.jpg" alt="Title page of Law 5 of 1960, the Basic Agrarian Law" decoding="async" /></figure><span class="idx">02 Title</span> <strong>PT PMA</strong><p>Freehold is not a foreign right under the Basic Agrarian Law. A nominee certificate is the nightmare dressed up as ownership.</p></article>
+        <article class="stat"><figure class="shot shot-stud"><img src="assets/photos/steel-stud.jpg" alt="Cross-section of a cold-formed steel stud, the wall specification" loading="lazy" decoding="async" /></figure><span class="idx">03 Build</span> <strong>Kayra</strong><p>The company that draws the PBG is the company that has to live with the SLF. A builder hired after the sale can walk away from both.</p></article>
         <article class="stat"><span class="idx">04 Capacity</span> <strong>4 + 1</strong><p>About four large builds and one 8–10 unit development a year. The steel queue is the limit, so the offer cannot be a launch slogan.</p></article>
       </div>
       <p class="cite">Unpacked in the process below, and in the <a href="mistakes.html">mistakes</a> note. A reading of the public instruments and the 18 September call. Not a legal opinion, and not a forecast.</p>
     </div>
   </section>
 
-  <section class="section paper">
+  <section class="section paper" id="market" data-chapter="Demand">
     <div class="wrap grid-2">
       <div>
         <span class="chip">BPS Bali</span> 
@@ -171,7 +187,7 @@
     </div>
   </section>
 
-  <section class="section" id="fundamentals">
+  <section class="section" id="fundamentals" data-chapter="Fundamentals">
     <div class="wrap">
       <p class="kicker">Below the arrivals</p>
       <h2>Demand is not the scarce <em>thing.</em></h2>
@@ -221,36 +237,36 @@
       <p>These are the projects that get stapled to a sales line. The status is the point. A groundbreaking is not a train. A special economic zone is not yet an international financial centre.</p>
       <div class="infra">
         <article id="subway">
-          <figure class="shot"><img src="assets/photos/kuta.jpg" alt="Kuta beach and the hotels along the shore. The subway groundbreaking was here. No line is running." /></figure>
-          <span class="pill wait">Ground broken · not running</span> 
+          <figure class="shot"><img src="assets/photos/kuta.jpg" alt="Kuta beach and the hotels along the shore. The subway groundbreaking was here. No line is running." loading="lazy" decoding="async" /></figure>
+          <span class="status wait">Ground broken · not running</span> 
           <h3>Urban subway</h3>
           <p>First stone, September 2024, under PT Sarana Bali Dwipa Jaya. A later phase is described as Cemagi–Canggu–Mengwi. In February 2026 the Kuta site still had no follow-on works, and the provincial legislature had not been given a validated progress file.</p>
           <p class="cite"><a href="https://www.balipost.com/news/2026/02/09/526844/Sejak-Groundbreaking-September-2024,Proyek...html">Bali Post, 9 February 2026</a></p>
         </article>
         <article id="benoa">
-          <figure class="shot"><img src="assets/photos/benoa.jpg" alt="A superyacht alongside at Benoa harbour" /></figure>
-          <span class="pill live">Operating</span> 
+          <figure class="shot"><img src="assets/photos/benoa.jpg" alt="A superyacht alongside at Benoa harbour" loading="lazy" decoding="async" /></figure>
+          <span class="status live">Operating</span> 
           <h3>Benoa yacht marina</h3>
           <p>Bali Gapura Marina, inside the Bali Maritime Tourism Hub at Benoa. Pelindo opened Dock B and Dock C in July 2026, capacity 75 yachts, including vessels to 200 feet. Full marina target quoted at 180 yachts in 2027.</p>
           <p class="cite"><a href="https://www.idxchannel.com/economics/pelindo-operasikan-2-dermaga-di-pelabuhan-benoa-mampu-layani-75-kapal-yacht">Pelindo, via IDX Channel, 27 July 2026</a></p>
         </article>
         <article id="toll">
-          <figure class="shot"><img src="assets/photos/medewi.jpg" alt="Medewi beach, in Pekutatan. The toll to Mengwi is still a tender, not a road." /></figure>
-          <span class="pill wait">Tender aimed at late 2026</span> 
+          <figure class="shot"><img src="assets/photos/medewi.jpg" alt="Medewi beach, in Pekutatan. The toll to Mengwi is still a tender, not a road." loading="lazy" decoding="async" /></figure>
+          <span class="status wait">Tender aimed at late 2026</span> 
           <h3>Pekutatan–Mengwi toll</h3>
           <p>The Gilimanuk–Mengwi scheme was re-scoped. Gilimanuk–Pekutatan is no longer a toll. The toll that remains is about 42 km, Pekutatan to Mengwi. The governor’s line in September 2026: tender late 2026, physical works early 2027.</p>
           <p class="cite"><a href="https://bali.jpnn.com/bali-terkini/44565/koster-update-tol-gilimanukmengwi-panjang-trase-jadi-42-km-target-mulai-2027">Governor Koster, via JPNN, 22 September 2026</a></p>
         </article>
         <article id="kura-kura">
-          <figure class="shot"><img src="assets/photos/serangan.jpg" alt="The working shore at Serangan, the island named in the Kura Kura zone. These are not the zone’s buildings." /></figure>
-          <span class="pill live">Zone designated</span> 
+          <figure class="shot"><img src="assets/photos/serangan.jpg" alt="The working shore at Serangan, the island named in the Kura Kura zone. These are not the zone’s buildings." loading="lazy" decoding="async" /></figure>
+          <span class="status live">Zone designated</span> 
           <h3>KEK Kura Kura Bali</h3>
           <p>Government Regulation 23 of 2023. About 498 hectares on Serangan, Denpasar Selatan. The SEZ National Council verified operational readiness in March 2024. That is a tourism, culture, and creative zone with a tax-holiday framework. It is not, by itself, a financial-centre licence.</p>
           <p class="cite"><a href="https://pasal.id/peraturan/pp/pp-no-23-tahun-2023">PP 23/2023</a></p>
         </article>
         <article id="financial-centre">
-          <figure class="shot shot-sanur"><img src="assets/photos/sanur.jpg" alt="The Sanur shore, one of the coasts named in the financial-centre study. The centre has not been designated." /></figure>
-          <span class="pill study">Under preparation</span> 
+          <figure class="shot shot-sanur"><img src="assets/photos/sanur.jpg" alt="The Sanur shore, one of the coasts named in the financial-centre study. The centre has not been designated." loading="lazy" decoding="async" /></figure>
+          <span class="status study">Under preparation</span> 
           <h3>International financial centre</h3>
           <p>Coordinating Minister Airlangga has said the government is finishing the rules for a financial-sector SEZ in Bali. Kura Kura and Sanur are locations being looked at, along with sites near Benoa. As of May 2026 it had not been designated.</p>
           <p class="cite"><a href="https://kek.go.id/media/press/pemerintah-siapkan-bali-jadi-pusat-keuangan-internasional-pengembangan-kek-kura-kura-bali-dan-sanur-dipercepat">Coordinating Ministry for Economic Affairs, via kek.go.id</a></p>
@@ -260,7 +276,7 @@
     </div>
   </section>
 
-  <section class="section paper">
+  <section class="section paper" id="gap">
     <div class="wrap grid-2">
       <div>
         <p class="kicker">The gap</p>
@@ -274,13 +290,25 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="process" data-chapter="The process">
     <div class="wrap">
       <p class="kicker">The process</p>
       <h2>Source. Permit. Build. <em>Stay.</em></h2>
       <p class="lede">Six checks, in the order the statute forces. Skip one and the arrival number does not save the asset.</p>
+      <div class="process-grid">
+        <nav class="process-rail" aria-label="Steps">
+          <i class="marker" aria-hidden="true"></i>
+          <ol>
+            <li><a href="#step-source"><span class="idx">01</span><span>Source</span></a></li>
+            <li><a href="#step-structure"><span class="idx">02</span><span>Structure</span></a></li>
+            <li><a href="#step-permit"><span class="idx">03</span><span>Permit</span></a></li>
+            <li><a href="#step-specification"><span class="idx">04</span><span>Specification</span></a></li>
+            <li><a href="#step-function"><span class="idx">05</span><span>Function</span></a></li>
+            <li><a href="#step-stay"><span class="idx">06</span><span>Stay</span></a></li>
+          </ol>
+        </nav>
       <div class="process">
-        <article>
+        <article id="step-source">
           <span class="idx">01</span> 
           <div>
             <h3>Source. The land has to be allowed to be the building.</h3>
@@ -288,7 +316,7 @@
             <p>This is why the homepage leads with place, not a render. The Carrd names Bali, Lombok, and the North Bali airport belt. The strategy names Tabanan as the window. The company page says Tabanan and the Carrd says Seminyak. The file picks one address, then proves the zone, before anyone talks about a view.</p>
           </div>
         </article>
-        <article>
+        <article id="step-structure">
           <span class="idx">02</span> 
           <div>
             <h3>Structure. PT PMA, because freehold is not on offer.</h3>
@@ -296,7 +324,7 @@
             <p>The words already in public are a PT PMA, the foreign-investment company, and a lease put through an Indonesian notary. The company is the entity that can hold a right to build. The notarial deed is the instrument a court can read. What those two actually protect, and what they do not, waits on the legal memo. Until that memo is signed, this page will not call the structure risk-free.</p>
           </div>
         </article>
-        <article>
+        <article id="step-permit">
           <span class="idx">03</span> 
           <div>
             <h3>Permit. PBG before the steel is ordered.</h3>
@@ -304,7 +332,7 @@
             <p>Kayra sits on the homepage because the company that will build the drawing is the company that has to live with what the permit allows. A builder hired after the sale can treat the PBG as someone else’s document. Keystone Kayra Construction is the build arm on Christopher’s profile. KHC holds product, sequence, and cost.</p>
           </div>
         </article>
-        <article>
+        <article id="step-specification">
           <span class="idx">04</span> 
           <div>
             <h3>Specification. The wall is the line the yield table hides.</h3>
@@ -312,7 +340,7 @@
             <p>The 4 + 1 on the homepage is that choice made numerical. Two steel-stud factories, a priority queue, about four large new builds and one development of 8 to 10 units a year. Management can scale. The wall cannot pretend to. Specifying it before sale is how the operator stops the easy detail becoming the investor’s renovation. Christopher is still writing this in his own sentences. Until that note lands, this is the call, not a finished specification.</p>
           </div>
         </article>
-        <article>
+        <article id="step-function">
           <span class="idx">05</span> 
           <div>
             <h3>Function. SLF is the moment the building may earn.</h3>
@@ -320,7 +348,7 @@
             <p>This is why “stay” is a verb and not a hospitality slogan. The handover model, the pattern named against Kiss Developments on the call, leaves the investor to obtain, renew, and defend that certificate after the builder has gone. KHC’s contrast is that management remains with the name that sold the position. The percent is not settled in our own papers: 25% in the strategy file, 20% plus a 5% sinking fund on the public profile. One of those becomes the sentence. Not both, and not yet.</p>
           </div>
         </article>
-        <article>
+        <article id="step-stay">
           <span class="idx">06</span> 
           <div>
             <h3>Stay. The exit is written at entry.</h3>
@@ -329,10 +357,11 @@
           </div>
         </article>
       </div>
+      </div>
     </div>
   </section>
 
-  <section class="section navy">
+  <section class="section navy" id="returns" data-chapter="Returns">
     <div class="wrap grid-2">
       <div>
         <span class="chip">Research file. Not cleared.</span> 
@@ -351,7 +380,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="entry" data-chapter="Entry">
     <div class="wrap">
       <p class="kicker">Entry</p>
       <h2>Three rungs. One <em>path.</em></h2>
@@ -363,7 +392,7 @@
     </div>
   </section>
 
-  <section class="section paper">
+  <section class="section paper" id="faq" data-chapter="Questions">
     <div class="wrap">
       <p class="kicker">Questions the file should answer</p>
       <div class="faq">
@@ -388,7 +417,7 @@
     </div>
   </section>
 
-  <section class="section learn" id="learn">
+  <section class="section learn" id="learn" data-chapter="Learn">
     <div class="wrap">
       <p class="kicker">If the page has not settled it</p>
       <h2>Want to learn about <em>Bali.</em></h2>
@@ -400,28 +429,28 @@
         <button type="button" role="tab" id="tab-method" aria-controls="learn-method" aria-selected="false">The method</button>
       </div>
       <div class="learn-panel is-on" id="learn-market" role="tabpanel" aria-labelledby="tab-market">
-        <a class="learn-card" href="notes/prices.html"><img src="assets/photos/canggu.jpg" alt="The shore at Canggu" /><div><span class="idx">Prices</span> <strong>Australia beside Denpasar.</strong><p>Cotality’s 2026 correction, and Bank Indonesia’s new-house index, which barely moved.</p></div></a>
-        <a class="learn-card" href="notes/growth-rates.html"><img src="assets/photos/tabanan.jpg" alt="Rice terraces in Tabanan" /><div><span class="idx">Growth</span> <strong>Bali against Australia.</strong><p>5.82% provincial growth beside 2.6% Australian GDP. The house-price bar is the quiet one.</p></div></a>
-        <a class="learn-card" href="notes/arrivals.html"><img src="assets/photos/kuta.jpg" alt="Kuta beach" /><div><span class="idx">Demand</span> <strong>A guest count is not a yield.</strong><p>6.95 million direct foreign arrivals in 2025. That is the airport, not a villa.</p></div></a>
-        <a class="learn-card" href="notes/australia-yield.html"><img src="assets/photos/sanur.jpg" alt="The Sanur shore" /><div><span class="idx">Australia</span> <strong>Thin cash, large asset.</strong><p>The published gross yield, and a correction that did not arrive evenly.</p></div></a>
+        <a class="learn-card" href="notes/prices.html"><img src="assets/photos/canggu.jpg" alt="The shore at Canggu" loading="lazy" decoding="async" /><div><span class="idx">Prices</span> <strong>Australia beside Denpasar.</strong><p>Cotality’s 2026 correction, and Bank Indonesia’s new-house index, which barely moved.</p></div></a>
+        <a class="learn-card" href="notes/growth-rates.html"><img src="assets/photos/tabanan.jpg" alt="Rice terraces in Tabanan" loading="lazy" decoding="async" /><div><span class="idx">Growth</span> <strong>Bali against Australia.</strong><p>5.82% provincial growth beside 2.6% Australian GDP. The house-price bar is the quiet one.</p></div></a>
+        <a class="learn-card" href="notes/arrivals.html"><img src="assets/photos/kuta.jpg" alt="Kuta beach" loading="lazy" decoding="async" /><div><span class="idx">Demand</span> <strong>A guest count is not a yield.</strong><p>6.95 million direct foreign arrivals in 2025. That is the airport, not a villa.</p></div></a>
+        <a class="learn-card" href="notes/australia-yield.html"><img src="assets/photos/sanur.jpg" alt="The Sanur shore" loading="lazy" decoding="async" /><div><span class="idx">Australia</span> <strong>Thin cash, large asset.</strong><p>The published gross yield, and a correction that did not arrive evenly.</p></div></a>
       </div>
       <div class="learn-panel" id="learn-places" role="tabpanel" aria-labelledby="tab-places">
-        <a class="learn-card" href="notes/corridor.html"><img src="assets/photos/seminyak.jpg" alt="A street in Seminyak" /><div><span class="idx">Places</span> <strong>The corridor is a set of jobs.</strong><p>Canggu, Seminyak, Uluwatu, Ubud, and Tabanan, and what each one is for.</p></div></a>
-        <a class="learn-card" href="notes/whats-ahead.html"><img src="assets/photos/benoa.jpg" alt="A yacht at Benoa harbour" /><div><span class="idx">Ahead</span> <strong>A groundbreaking is not a train.</strong><p>Marina, zone, financial centre, subway, toll. Ranked by what exists.</p></div></a>
-        <a class="learn-card" href="notes/tabanan.html"><img src="assets/photos/medewi.jpg" alt="Medewi beach" /><div><span class="idx">Window</span> <strong>A window is not a road.</strong><p>Tabanan, and a toll that is still a tender.</p></div></a>
-        <a class="learn-card" href="notes/occupancy.html"><img src="assets/photos/ubud.jpg" alt="Rice terraces near Ubud" /><div><span class="idx">Demand</span> <strong>Full, and more crowded.</strong><p>Star hotels at 61%. Listing revenue down while arrivals rose.</p></div></a>
+        <a class="learn-card" href="notes/corridor.html"><img src="assets/photos/seminyak.jpg" alt="A street in Seminyak" loading="lazy" decoding="async" /><div><span class="idx">Places</span> <strong>The corridor is a set of jobs.</strong><p>Canggu, Seminyak, Uluwatu, Ubud, and Tabanan, and what each one is for.</p></div></a>
+        <a class="learn-card" href="notes/whats-ahead.html"><img src="assets/photos/benoa.jpg" alt="A yacht at Benoa harbour" loading="lazy" decoding="async" /><div><span class="idx">Ahead</span> <strong>A groundbreaking is not a train.</strong><p>Marina, zone, financial centre, subway, toll. Ranked by what exists.</p></div></a>
+        <a class="learn-card" href="notes/tabanan.html"><img src="assets/photos/medewi.jpg" alt="Medewi beach" loading="lazy" decoding="async" /><div><span class="idx">Window</span> <strong>A window is not a road.</strong><p>Tabanan, and a toll that is still a tender.</p></div></a>
+        <a class="learn-card" href="notes/occupancy.html"><img src="assets/photos/ubud.jpg" alt="Rice terraces near Ubud" loading="lazy" decoding="async" /><div><span class="idx">Demand</span> <strong>Full, and more crowded.</strong><p>Star hotels at 61%. Listing revenue down while arrivals rose.</p></div></a>
       </div>
       <div class="learn-panel" id="learn-field" role="tabpanel" aria-labelledby="tab-field">
-        <a class="learn-card" href="notes/kiss.html"><img src="assets/photos/canggu.jpg" alt="Canggu coast" /><div><span class="idx">Field</span> <strong>Kiss, Magnum, and the seam.</strong><p>What the launch sells, and who is left holding year five.</p></div></a>
-        <a class="learn-card" href="notes/segments.html"><img src="assets/photos/uluwatu.jpg" alt="The cliff at Uluwatu" /><div><span class="idx">Segments</span> <strong>Say which asset you are buying.</strong><p>Land, villa, hotel, short-stay book, or company equity.</p></div></a>
-        <a class="learn-card" href="notes/everyday.html"><img src="assets/photos/sanur.jpg" alt="Sanur" /><div><span class="idx">Households</span> <strong>The house is already the portfolio.</strong><p>Why a household looks offshore, and why that look is not a retail product.</p></div></a>
-        <a class="learn-card" href="notes/business-owners.html"><img src="assets/photos/steel-stud.jpg" alt="A steel stud in section" /><div><span class="idx">Owners</span> <strong>An owner already knows a handover.</strong><p>The same corridor, read by someone who runs a P&amp;L.</p></div></a>
+        <a class="learn-card" href="notes/kiss.html"><img src="assets/photos/canggu.jpg" alt="Canggu coast" loading="lazy" decoding="async" /><div><span class="idx">Field</span> <strong>Kiss, Magnum, and the seam.</strong><p>What the launch sells, and who is left holding year five.</p></div></a>
+        <a class="learn-card" href="notes/segments.html"><img src="assets/photos/uluwatu.jpg" alt="The cliff at Uluwatu" loading="lazy" decoding="async" /><div><span class="idx">Segments</span> <strong>Say which asset you are buying.</strong><p>Land, villa, hotel, short-stay book, or company equity.</p></div></a>
+        <a class="learn-card" href="notes/everyday.html"><img src="assets/photos/sanur.jpg" alt="Sanur" loading="lazy" decoding="async" /><div><span class="idx">Households</span> <strong>The house is already the portfolio.</strong><p>Why a household looks offshore, and why that look is not a retail product.</p></div></a>
+        <a class="learn-card" href="notes/business-owners.html"><img src="assets/photos/steel-stud.jpg" alt="A steel stud in section" loading="lazy" decoding="async" /><div><span class="idx">Owners</span> <strong>An owner already knows a handover.</strong><p>The same corridor, read by someone who runs a P&amp;L.</p></div></a>
       </div>
       <div class="learn-panel" id="learn-method" role="tabpanel" aria-labelledby="tab-method">
-        <a class="learn-card" href="notes/the-wall.html"><img src="assets/photos/aac.jpg" alt="Aerated concrete block" /><div><span class="idx">Method</span> <strong>The wall the table hides.</strong><p>Steel stud against the block the market calls Hebel.</p></div></a>
-        <a class="learn-card" href="notes/permits.html"><img src="assets/photos/hotel-sanur.jpg" alt="A hotel front in Sanur" /><div><span class="idx">Permits</span> <strong>Use is a certificate, not a key.</strong><p>KKPR, PBG, then SLF. In that order.</p></div></a>
-        <a class="learn-card" href="notes/one-operator.html"><img src="assets/photos/medewi.jpg" alt="Medewi" /><div><span class="idx">Stack</span> <strong>Three contracts. Then nobody.</strong><p>Why source, build, and stay are one name.</p></div></a>
-        <a class="learn-card" href="notes/title.html"><img src="assets/photos/agraria.jpg" alt="The Basic Agrarian Law" /><div><span class="idx">Title</span> <strong>The certificate is the product.</strong><p>Freehold is not on the table. A reading, not advice.</p></div></a>
+        <a class="learn-card" href="notes/the-wall.html"><img src="assets/photos/aac.jpg" alt="Aerated concrete block" loading="lazy" decoding="async" /><div><span class="idx">Method</span> <strong>The wall the table hides.</strong><p>Steel stud against the block the market calls Hebel.</p></div></a>
+        <a class="learn-card" href="notes/permits.html"><img src="assets/photos/hotel-sanur.jpg" alt="A hotel front in Sanur" loading="lazy" decoding="async" /><div><span class="idx">Permits</span> <strong>Use is a certificate, not a key.</strong><p>KKPR, PBG, then SLF. In that order.</p></div></a>
+        <a class="learn-card" href="notes/one-operator.html"><img src="assets/photos/medewi.jpg" alt="Medewi" loading="lazy" decoding="async" /><div><span class="idx">Stack</span> <strong>Three contracts. Then nobody.</strong><p>Why source, build, and stay are one name.</p></div></a>
+        <a class="learn-card" href="notes/title.html"><img src="assets/photos/agraria.jpg" alt="The Basic Agrarian Law" loading="lazy" decoding="async" /><div><span class="idx">Title</span> <strong>The certificate is the product.</strong><p>Freehold is not on the table. A reading, not advice.</p></div></a>
       </div>
       <a class="btn" href="notes/index.html">All 22 articles</a>
     </div>
@@ -457,6 +486,10 @@
         <p>Contact</p>
         <a href="walk.html">Walk the stack</a>
       </nav>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2026 Keystone Horizon Collective. Research notes, not an offer. Every figure names its source. The internal model is not cleared.</p>
+      <a class="to-top" href="#top">Back to top <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 10V2M2.5 5.5 6 2l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </footer>
   <script src="js/site.js"></script>
