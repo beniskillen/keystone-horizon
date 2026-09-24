@@ -675,6 +675,11 @@ footer nav { display: flex; gap: 16px; flex-wrap: wrap; }
   background: #0c1410;
 }
 .split .shot { margin: -28px -28px 18px; }
+.process .shot, .shot-inline {
+  margin: 16px 0 4px;
+  max-width: 520px;
+  border-radius: 12px;
+}
 .shot img {
   width: 100%;
   height: 100%;

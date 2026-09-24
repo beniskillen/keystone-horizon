@@ -74,6 +74,8 @@
       blurb: "In the land file, and on the Carrd as an address. The company page says Tabanan. Pick the place, then prove the zone.",
       href: "areas.html#seminyak",
       file: "Areas · land file",
+      photo: "assets/photos/seminyak.jpg",
+      alt: "A street in Seminyak, gates and houses rather than the beach clubs",
       map: "inset",
       x: 132, y: 132
     },
@@ -129,6 +131,8 @@
       blurb: "Designated under Government Regulation 23 of 2023. A tourism, culture, and creative zone. Not, by itself, a financial-centre licence.",
       href: "index.html#kura-kura",
       file: "Fundamentals · SEZ",
+      photo: "assets/photos/serangan.jpg",
+      alt: "The working shore at Serangan, the island named in the Kura Kura zone",
       map: "inset",
       x: 456, y: 176
     },
@@ -156,6 +160,8 @@
       blurb: "First stone at Kuta, September 2024. A later phase is described as Cemagi–Canggu–Mengwi. In February 2026 the public record used here still showed no follow-on works.",
       href: "index.html#subway",
       file: "Fundamentals · subway",
+      photo: "assets/photos/kuta.jpg",
+      alt: "Kuta beach and the hotels along the shore. The groundbreaking was here. No line is running.",
       map: "inset",
       x: 108, y: 186
     },
@@ -168,6 +174,8 @@
       blurb: "Gilimanuk–Pekutatan is no longer a toll. What remains is about 42 km, Pekutatan to Mengwi. Tender aimed at late 2026, physical works early 2027. Not a yield.",
       href: "index.html#toll",
       file: "Fundamentals · toll",
+      photo: "assets/photos/medewi.jpg",
+      alt: "Medewi beach, in Pekutatan. The toll to Mengwi is still a tender, not a road.",
       map: "overview",
       line: true
     }
