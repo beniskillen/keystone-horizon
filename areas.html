@@ -20,13 +20,22 @@
       <a class="btn" href="walk.html">Walk the stack</a>
     </nav>
   </header>
-  <section class="section">
+  <section class="section" id="map">
+    <div class="wrap">
+      <span class="chip">Research file. Not cleared.</span>
+      <p class="kicker">Where the build sits</p>
+      <h1>A profile, not a <em>headline.</em></h1>
+      <p class="lede">Canggu is the expensive print. Tabanan is the window in the strategy: lower land cost, still inside the corridor. Hover the map. The shaded panel is the south corridor, and it lights when you enter it.</p>
+      <div data-atlas></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
     <div class="wrap grid-2">
       <div>
         <span class="chip">2019–2024 land CAGR</span>
-        <p class="kicker">Where the build sits</p>
-        <h1>A profile, not a <em>headline.</em></h1>
-        <p class="lede">Canggu is the expensive print. Tabanan is the window in the strategy: lower land cost, still inside the corridor. The bars are the research file, animated so the spread is obvious.</p>
+        <p class="kicker">The print</p>
+        <h2>The spread, in <em>bars.</em></h2>
+        <p class="lede">Same file as the map. Animated so the gap between the corridor and a Sydney terrace is obvious.</p>
       </div>
       <div class="bars">
         <div class="bar" data-value="23.8" data-max="28"><span>Canggu</span><span class="track"><span class="fill"></span></span><span data-count data-suffix="%">0</span></div>
@@ -39,7 +48,7 @@
       </div>
     </div>
   </section>
-  <section class="section paper">
+  <section class="section paper" id="model">
     <div class="wrap">
       <span class="chip">Internal model. Do not publish.</span>
       <p class="kicker">KHC base case</p>
@@ -53,17 +62,74 @@
       <p class="note">Tabanan land in the same file: IDR 5–8 million per square metre, against Canggu at IDR 9–14 million. That discount is a claim. It needs a source row before it is said outside this draft.</p>
     </div>
   </section>
-  <section class="section">
-    <div class="wrap grid-3">
-      <article class="card"><span class="idx">Tabanan</span><h3>The window.</h3><p>Named in the strategy as the place. The company LinkedIn says Tabanan. The Carrd and Christopher’s profile say Seminyak. Pick one public address.</p></article>
-      <article class="card"><span class="idx">North Bali</span><h3>Airport belt.</h3><p>On the Carrd as a scouting focus, with Lombok. Uplift percentages on the LinkedIn bio are not repeated here.</p></article>
-      <article class="card"><span class="idx">Built</span><h3>Not a postcard.</h3><p>The hero film is a construction aerial, a placeholder until a Tabanan shoot exists. No pool. No sunset villa.</p></article>
+  <section class="section" id="places">
+    <div class="wrap">
+      <p class="kicker">Open the file</p>
+      <h2>The note behind each <em>place.</em></h2>
+      <p class="lede">The map lands here. Each note points at the page that already holds the longer record.</p>
+      <div class="place-files">
+        <article class="card place-file" id="tabanan">
+          <figure class="shot"><img src="assets/photos/tabanan.jpg" alt="Jatiluwih rice terraces, Tabanan" /></figure>
+          <span class="idx">Window</span>
+          <h3>Tabanan</h3>
+          <p>Named in the strategy as the place. Land in the same file is IDR 5–8 million per square metre, against Canggu at IDR 9–14 million. The company page says Tabanan. The Carrd says Seminyak. Pick one, then prove the zone. The uncleared base case for a position sits in the model above: 13.6% target IRR, 1.76×.</p>
+          <a class="btn" href="stack.html">The source layer</a>
+        </article>
+        <article class="card place-file" id="canggu">
+          <figure class="shot"><img src="assets/photos/canggu.jpg" alt="Volcanic shore at Canggu" /></figure>
+          <span class="idx">23.8%</span>
+          <h3>Canggu</h3>
+          <p>The expensive print. Highest land CAGR in the internal file, 2019–2024. Operators describe listing growth above 40% with occupancy under pressure. That bar is not a guest count. A brochure occupancy in the mid-70s, without the stock and the costs, is one of the mistakes.</p>
+          <a class="btn" href="mistakes.html#occupancy">Occupancy, unpacked</a>
+        </article>
+        <article class="card place-file" id="ubud">
+          <figure class="shot"><img src="assets/photos/ubud.jpg" alt="Rice terraces at Tegallalang, in the Ubud hills" /></figure>
+          <span class="idx">17.6%</span>
+          <h3>Ubud</h3>
+          <p>Inland, a different guest from the coast. The internal file prints it under Canggu. The spatial plan still decides whether a house there is allowed to be a business.</p>
+          <a class="btn" href="mistakes.html#permit">Permit, not a licence</a>
+        </article>
+        <article class="card place-file" id="uluwatu">
+          <figure class="shot shot-cliff"><img src="assets/photos/uluwatu.jpg" alt="The cliff at Uluwatu, with buildings already on the edge" /></figure>
+          <span class="idx">17.1%</span>
+          <h3>Uluwatu</h3>
+          <p>The cliff market. The view sells the picture. The setback, the PBG, and the SLF decide whether that view can be let.</p>
+          <a class="btn" href="method.html">The wall and the file</a>
+        </article>
+        <article class="card place-file" id="seminyak">
+          <span class="idx">14.9%</span>
+          <h3>Seminyak</h3>
+          <p>In the land file, and on the Carrd as an address. Christopher’s profile says Seminyak. The company page says Tabanan. The map does not pretend those are the same sentence.</p>
+          <a class="btn" href="operators.html">Who the address is attached to</a>
+        </article>
+        <article class="card place-file" id="north-bali">
+          <figure class="shot shot-north"><img src="assets/photos/north-bali.jpg" alt="The north coast of Bali, Buleleng, from the air" /></figure>
+          <span class="idx">Scout</span>
+          <h3>North Bali</h3>
+          <p>On the Carrd as a scouting focus, with Lombok. Uplift percentages on the LinkedIn bio are not repeated here. The cohort is where those notes are supposed to land.</p>
+          <a class="btn" href="offerings.html">Cohort notes</a>
+        </article>
+        <article class="card place-file" id="lombok">
+          <figure class="shot"><img src="assets/photos/lombok.jpg" alt="A bay near Senggigi, Lombok" /></figure>
+          <span class="idx">Scout</span>
+          <h3>Lombok</h3>
+          <p>Named with Bali and the surrounding islands. No separate return table in this file yet. Monthly infrastructure notes on North Bali and Lombok are described on the Founding Circle rung.</p>
+          <a class="btn" href="offerings.html">How the notes are packaged</a>
+        </article>
+        <article class="card place-file">
+          <span class="idx">Not a postcard</span>
+          <h3>What the map refuses</h3>
+          <p>The hero film is a construction aerial, a placeholder until a Tabanan shoot exists. No pool. No sunset villa. Infrastructure that is not operating is drawn as status, not as yield.</p>
+          <a class="btn" href="index.html#subway">Infrastructure status</a>
+        </article>
+      </div>
     </div>
   </section>
   <footer>
     <div>Areas draft. Every percent on this page waits on the claims register.</div>
-    <nav><a href="index.html">Home</a><a href="method.html">Method</a><a href="offerings.html">Offerings</a></nav>
+    <nav><a href="index.html">Home</a><a href="method.html">Method</a><a href="offerings.html">Offerings</a><a href="photographs.html">Photographs</a></nav>
   </footer>
   <script src="js/site.js"></script>
+  <script src="js/atlas.js"></script>
 </body>
 </html>

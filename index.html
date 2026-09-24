@@ -73,6 +73,16 @@
     </ul>
   </section>
 
+  <section class="section" id="map">
+    <div class="wrap">
+      <span class="chip">Research file. Not cleared.</span>
+      <p class="kicker">The island</p>
+      <h2>Every place in the file, on one <em>map.</em></h2>
+      <p class="lede">Hover a coast, or the shaded south corridor, and the profile for that place comes up. Click through to the note that holds the data: the land file, the infrastructure record, or the scouting list.</p>
+      <div data-atlas></div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <p class="kicker">Why the page starts here</p>
@@ -80,8 +90,8 @@
       <p class="lede">The render is the easy part. These four are what a buyer actually needs the operator to stand behind, and each one fails in a different place if it is split across vendors.</p>
       <div class="grid-4" style="margin-top:28px">
         <article class="stat"><span class="idx">01 Operator</span><strong>1</strong><p>Title, permit, wall, and management fail at the seams. One name has to hold the sequence, or the investor inherits the gaps.</p></article>
-        <article class="stat"><span class="idx">02 Title</span><strong>PT PMA</strong><p>Freehold is not a foreign right under the Basic Agrarian Law. A nominee certificate is the nightmare dressed up as ownership.</p></article>
-        <article class="stat"><span class="idx">03 Build</span><strong>Kayra</strong><p>The company that draws the PBG is the company that has to live with the SLF. A builder hired after the sale can walk away from both.</p></article>
+        <article class="stat"><figure class="shot shot-deed"><img src="assets/photos/agraria.jpg" alt="Title page of Law 5 of 1960, the Basic Agrarian Law" /></figure><span class="idx">02 Title</span><strong>PT PMA</strong><p>Freehold is not a foreign right under the Basic Agrarian Law. A nominee certificate is the nightmare dressed up as ownership.</p></article>
+        <article class="stat"><figure class="shot shot-stud"><img src="assets/photos/steel-stud.jpg" alt="Cross-section of a cold-formed steel stud, the wall specification" /></figure><span class="idx">03 Build</span><strong>Kayra</strong><p>The company that draws the PBG is the company that has to live with the SLF. A builder hired after the sale can walk away from both.</p></article>
         <article class="stat"><span class="idx">04 Capacity</span><strong>4 + 1</strong><p>About four large builds and one 8–10 unit development a year. The steel queue is the limit, so the offer cannot be a launch slogan.</p></article>
       </div>
       <p class="cite">Unpacked in the process below, and in the <a href="mistakes.html">mistakes</a> note. A reading of the public instruments and the 18 September call. Not a legal opinion, and not a forecast.</p>
@@ -159,31 +169,32 @@
       <h3 class="subhead">What is actually underway</h3>
       <p>These are the projects that get stapled to a sales line. The status is the point. A groundbreaking is not a train. A special economic zone is not yet an international financial centre.</p>
       <div class="infra">
-        <article>
+        <article id="subway">
           <span class="pill wait">Ground broken · not running</span>
           <h3>Urban subway</h3>
           <p>First stone, September 2024, under PT Sarana Bali Dwipa Jaya. A later phase is described as Cemagi–Canggu–Mengwi. In February 2026 the Kuta site still had no follow-on works, and the provincial legislature had not been given a validated progress file.</p>
           <p class="cite"><a href="https://www.balipost.com/news/2026/02/09/526844/Sejak-Groundbreaking-September-2024,Proyek...html">Bali Post, 9 February 2026</a></p>
         </article>
-        <article>
+        <article id="benoa">
+          <figure class="shot"><img src="assets/photos/benoa.jpg" alt="A superyacht alongside at Benoa harbour" /></figure>
           <span class="pill live">Operating</span>
           <h3>Benoa yacht marina</h3>
           <p>Bali Gapura Marina, inside the Bali Maritime Tourism Hub at Benoa. Pelindo opened Dock B and Dock C in July 2026, capacity 75 yachts, including vessels to 200 feet. Full marina target quoted at 180 yachts in 2027.</p>
           <p class="cite"><a href="https://www.idxchannel.com/economics/pelindo-operasikan-2-dermaga-di-pelabuhan-benoa-mampu-layani-75-kapal-yacht">Pelindo, via IDX Channel, 27 July 2026</a></p>
         </article>
-        <article>
+        <article id="toll">
           <span class="pill wait">Tender aimed at late 2026</span>
           <h3>Pekutatan–Mengwi toll</h3>
           <p>The Gilimanuk–Mengwi scheme was re-scoped. Gilimanuk–Pekutatan is no longer a toll. The toll that remains is about 42 km, Pekutatan to Mengwi. The governor’s line in September 2026: tender late 2026, physical works early 2027.</p>
           <p class="cite"><a href="https://bali.jpnn.com/bali-terkini/44565/koster-update-tol-gilimanukmengwi-panjang-trase-jadi-42-km-target-mulai-2027">Governor Koster, via JPNN, 22 September 2026</a></p>
         </article>
-        <article>
+        <article id="kura-kura">
           <span class="pill live">Zone designated</span>
           <h3>KEK Kura Kura Bali</h3>
           <p>Government Regulation 23 of 2023. About 498 hectares on Serangan, Denpasar Selatan. The SEZ National Council verified operational readiness in March 2024. That is a tourism, culture, and creative zone with a tax-holiday framework. It is not, by itself, a financial-centre licence.</p>
           <p class="cite"><a href="https://pasal.id/peraturan/pp/pp-no-23-tahun-2023">PP 23/2023</a></p>
         </article>
-        <article>
+        <article id="financial-centre">
           <span class="pill study">Under preparation</span>
           <h3>International financial centre</h3>
           <p>Coordinating Minister Airlangga has said the government is finishing the rules for a financial-sector SEZ in Bali. Kura Kura and Sanur are locations being looked at, along with sites near Benoa. As of May 2026 it had not been designated.</p>
@@ -272,8 +283,8 @@
         <span class="chip">Research file. Not cleared.</span>
         <p class="kicker">Return profile</p>
         <h2>The corridor, not a single <em>percent.</em></h2>
-        <p class="lede">These bars are the internal category file, 2019–2024 land CAGR. They are not BPS, and they are not cleared. The published case for the market is the arrivals above. This table is where a model would have to sit, once each source row is attached.</p>
-        <p><a class="btn" href="areas.html">Open the areas</a></p>
+        <p class="lede">These bars are the internal category file, 2019–2024 land CAGR. They are not BPS, and they are not cleared. The same places are on the map. Tabanan is the window. Canggu is the loudest historical print.</p>
+        <p><a class="btn" href="#map">Open the map</a></p>
       </div>
       <div class="bars" data-bars>
         <div class="bar" data-value="23.8" data-max="28"><span>Canggu</span><span class="track"><span class="fill"></span></span><span data-count data-suffix="%">0%</span></div>
@@ -282,28 +293,6 @@
         <div class="bar" data-value="14.9" data-max="28"><span>Seminyak</span><span class="track"><span class="fill"></span></span><span data-count data-suffix="%">0%</span></div>
         <div class="bar" data-value="5" data-max="28"><span>Sydney resi</span><span class="track"><span class="fill"></span></span><span data-count data-suffix="%">0%</span></div>
       </div>
-    </div>
-    <div class="places">
-      <article class="place">
-        <svg viewBox="0 0 120 72" aria-hidden="true"><path d="M8 58c18-22 28-8 40-20s22-6 32 4 24 8 32-6" fill="none" stroke="#8fb0c8" stroke-width="2"/><circle cx="28" cy="22" r="6" fill="#8fb0c8"/></svg>
-        <h3>Canggu</h3>
-        <p>The short-stay capital, and the place supply has multiplied fastest. Operators describe listing growth above 40% with occupancy under pressure. The bar above is the internal land file, not a guest count.</p>
-      </article>
-      <article class="place">
-        <svg viewBox="0 0 120 72" aria-hidden="true"><path d="M10 60 L40 18 L70 60 Z M50 60 L80 28 L110 60 Z" fill="none" stroke="#8fb0c8" stroke-width="2"/></svg>
-        <h3>Ubud</h3>
-        <p>Inland, cultural, a different guest from the coast. The internal file prints it under Canggu. The spatial plan still decides whether a house there is allowed to be a business.</p>
-      </article>
-      <article class="place">
-        <svg viewBox="0 0 120 72" aria-hidden="true"><path d="M8 40c20 8 30-20 48-8s28 18 56-6" fill="none" stroke="#8fb0c8" stroke-width="2"/><path d="M8 64h104" stroke="#8fb0c8" stroke-width="1"/></svg>
-        <h3>Uluwatu</h3>
-        <p>The cliff market. The view sells the picture. The setback, the PBG, and the SLF decide whether that view can be let.</p>
-      </article>
-      <article class="place">
-        <svg viewBox="0 0 120 72" aria-hidden="true"><rect x="16" y="28" width="22" height="32" fill="none" stroke="#8fb0c8" stroke-width="2"/><rect x="46" y="16" width="22" height="44" fill="none" stroke="#8fb0c8" stroke-width="2"/><rect x="76" y="34" width="22" height="26" fill="none" stroke="#8fb0c8" stroke-width="2"/></svg>
-        <h3>Tabanan</h3>
-        <p>The window named in the strategy: lower land in the internal file, still inside the corridor. The public address is still split with Seminyak. Pick one, then prove the zone.</p>
-      </article>
     </div>
   </section>
 
@@ -352,8 +341,10 @@
       <a href="areas.html">Areas</a>
       <a href="offerings.html">Offerings</a>
       <a href="operators.html">Operators</a>
+      <a href="photographs.html">Photographs</a>
     </nav>
   </footer>
   <script src="js/site.js"></script>
+  <script src="js/atlas.js"></script>
 </body>
 </html>
