@@ -240,6 +240,46 @@
     svg.addEventListener("mouseleave", function () { tip.hidden = true; });
   }
 
+  document.querySelectorAll(".blog-drop").forEach(function (drop) {
+    drop.addEventListener("click", function (event) { event.stopPropagation(); });
+  });
+  document.querySelectorAll(".blog-toggle").forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      var nav = button.closest(".blog-nav");
+      var open = !nav.classList.contains("is-open");
+      document.querySelectorAll(".blog-nav.is-open").forEach(function (el) {
+        el.classList.remove("is-open");
+        var toggle = el.querySelector(".blog-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+      });
+      nav.classList.toggle("is-open", open);
+      button.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+  document.addEventListener("click", function () {
+    document.querySelectorAll(".blog-nav.is-open").forEach(function (el) {
+      el.classList.remove("is-open");
+      var toggle = el.querySelector(".blog-toggle");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.querySelectorAll(".learn-tabs").forEach(function (tabs) {
+    tabs.addEventListener("click", function (event) {
+      var button = event.target.closest("button[role='tab']");
+      if (!button) return;
+      var id = button.getAttribute("aria-controls");
+      tabs.querySelectorAll("button").forEach(function (el) {
+        el.setAttribute("aria-selected", el === button ? "true" : "false");
+      });
+      var section = tabs.closest(".learn");
+      section.querySelectorAll(".learn-panel").forEach(function (panel) {
+        panel.classList.toggle("is-on", panel.id === id);
+      });
+    });
+  });
+
   var form = document.querySelector("form[data-draft]");
   if (form) {
     form.addEventListener("submit", function (event) {
